@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tabs__bar-wrap">
+        <div class="tabs__bar">
+          <div class="tabs__controls">View</div>
+          <div class="tabs__controls">General</div>
+          <div class="tabs__controls">Advanced</div>
+        </div>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__section">I'm the first tab View</div>
+        <div class="tabs__section">
+          second tab - General<br />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos,
+          iusto laboriosam voluptatem at reiciendis vel, facilis repellendus
+          totam excepturi earum saepe rerum ullam!
+        </div>
+        <div class="tabs__section">Welcome to third tab - Advanced</div>
+      </div>
+    </div>
+    <div class="sec3_collection">
+      <div class="inner">
+        <div class="collection_inner">
+          <div class="title">
+            <h3>COLLECTION</h3>
+          </div>
+          <div class="tabs">
+            <div class="tabs__bar-wrap">
+              <ul class="tabs__bar">
+                <li class="tabs__controls">LAGOA</li>
+                <li class="tabs__controls">SISSONNE</li>
+                <li class="tabs__controls">Legodt</li>
+                <li class="tabs__controls">jante ARTS</li>
+                <li class="tabs__controls">arelier NORD</li>
+                <li class="tabs__controls">SMELT</li>
+                <li class="tabs__controls">Legodt Cook</li>
+                <li class="tabs__controls">LBNL</li>
+              </ul>
+            </div>
+            <div class="tabs__content col-10-2">
+              <!-- lagoa -->
+              <div class="tabs__section" id="layout1"></div>
+              <!-- sissonne -->
+              <div class="collection_items tabs__section" id="layout2"></div>
+              <!-- legodt -->
+              <div class="collection_items tabs__section" id="layout1"></div>
+              <!-- jante ARTS -->
+              <div class="collection_items tabs__section" id="layout1"></div>
+              <!-- arelier NORD -->
+              <div class="collection_items tabs__section" id="layout2"></div>
+              <!-- LEGODT COOK-->
+              <div class="collection_items tabs__section" id="layout1"></div>
+              <!-- SMELT-->
+              <div class="collection_items tabs__section" id="layout1"></div>
+              <!-- LNBL-->
+              <div class="collection_items tabs__section" id="layout1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/tabsSlider.js"></script>
+    <script>
+      new TabsSlider(".tabs");
+    </script>
+  </body>
+</html>
