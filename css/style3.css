@@ -47,6 +47,7 @@ main {
 }
 .dinette_inner > div:hover .bottom_link:after,
 .commodity_product > div:hover .bottom_link:after,
+.Things_you_need > div:hover .bottom_link:after,
 .read_more:hover:after,
 .our_story:hover:after {
   transform: scaleX(0);
@@ -109,11 +110,42 @@ li.search_icon svg.active {
   fill: #212529;
 }
 /* lnb */
-.Things_you_need {
+.lnb {
+  display: none;
+}
+.Things_you_need,
+.collection {
+  display: flex;
+  padding: 1em 0 3em 0;
+}
+.Things_you_need > div {
+}
+.collection {
 }
 .lnb_menu {
+  margin-right: 5em;
 }
-.lnb_promotio {
+.lnb_menu ul {
+}
+.lnb_menu ul li {
+  margin-top: 1.5em;
+}
+.lnb_menu ul li a {
+  transition: 0.3s;
+  color: #212529;
+}
+.lnb_menu ul li:hover a {
+  opacity: 0.5;
+}
+.lnb_img {
+  height: fit-content;
+  padding: 0 3em;
+  border-right: 2px solid rgba(125, 124, 123, 0.3);
+}
+.lnb_NEW {
+  margin: 0 2em 0 3em;
+}
+.lnb_dinette {
 }
 /* mainVisual */
 .main_visual {

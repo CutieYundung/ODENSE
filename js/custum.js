@@ -10,6 +10,32 @@ $(window).scroll(function () {
   }
 });
 
+// header-탭메뉴
+$(".gnb, .lnb").mouseenter(function () {
+  $(".lnb").stop().slideDown();
+  $("header, .logo, .gnb, .util > li svg").addClass("active");
+});
+$(".gnb, .lnb").mouseleave(function () {
+  $(".lnb").stop().slideUp();
+  $("header, .logo, .gnb, .util>li svg").removeClass("active");
+});
+
+var gnb = $(".gnb > li");
+
+for (let i = 0; i < 2; i++) {
+  var lnb = $(".lnb > div");
+  $("#COL").hide();
+  $(gnb)
+    .eq(i)
+    .on("mouseenter", function () {
+      lnb.hide();
+      $(lnb).eq(i).stop().show();
+      $(".menu ul li span").removeClass("on");
+      $(this).children("span").addClass("on");
+    });
+}
+
+// sec2-탭메뉴
 $(document).ready(function () {
   var icon = $(".tyn_menu > li");
 
