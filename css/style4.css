@@ -82,7 +82,7 @@ header.down {
   }
 }
 header.up {
-  animation: fade_up 0.5s;
+  animation: fade_up 0.7s;
 }
 @keyframes fade_up {
   0% {
@@ -94,7 +94,7 @@ header.up {
   }
 }
 header.middle {
-  animation: fade_up 0.5s;
+  animation: fade_up 0.7s;
 }
 @keyframes fade_up {
   0% {
@@ -182,7 +182,7 @@ li.search_icon svg.active {
   color: #212529;
 }
 .lnb_menu ul li:hover a,
-.lnb_menu ul li:hover a {
+.lnb_menu2 ul li:hover a {
   opacity: 0.5;
 }
 .lnb_img,
@@ -196,7 +196,6 @@ li.search_icon svg.active {
   max-width: 100%;
   height: auto;
 }
-
 .lnb_recomend,
 .lnb_dinette {
   margin: 0 2em 0 3em;
@@ -204,16 +203,9 @@ li.search_icon svg.active {
 .lnb_menu ul li.on {
   opacity: 0.5;
 }
-.lnb_bg {
-  width: 100%;
-  height: calc(110% + 120px);
-  background-color: red;
-  position: absolute;
-  top: -60px;
-  left: 0;
-  z-index: -30;
-  display: none;
+.lnb_recomend {
 }
+
 /* mainVisual */
 .main_visual {
   width: 100%;
@@ -221,8 +213,21 @@ li.search_icon svg.active {
   display: flex;
   justify-content: center;
 }
-.main_inner {
-  margin: auto;
+.big {
+}
+.big:hover img {
+  transform: scale(1.1, 1.1);
+  filter: brightness(0.9);
+}
+.big > a > div {
+  overflow: hidden;
+  padding-bottom: 0.2em;
+  height: 90%;
+}
+.big > a > div > img {
+  max-width: 100%;
+  height: auto;
+  transition: 0.5s;
 }
 /* logo */
 .logo {
@@ -345,8 +350,12 @@ li.search_icon svg.active {
   bottom: 102%;
   right: 0;
   color: #212529;
+  opacity: 0.5;
 }
-.need_item {
+.need_items > a > img {
+  max-width: 100%;
+  height: auto;
+  width: 35%;
 }
 .need_item a {
   color: #212529;
@@ -438,7 +447,6 @@ li.search_icon svg.active {
   display: flex;
   position: relative;
   align-items: flex-start;
-  will-change: transform, height;
 }
 /* 탭 컨텐츠 */
 .collection_items {

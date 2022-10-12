@@ -276,7 +276,7 @@
               this.transformProperty
             ] = `translate3d(${t}px, 0, 0)`;
             const s = this.sections[this.currentId].offsetHeight;
-            (this.content.style.height = `${s}px`),
+            (this.content.style.height = `${770}px`),
               this.settings.underline && this._moveSliderLine();
           }
           _click(t) {
