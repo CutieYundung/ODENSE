@@ -49,6 +49,7 @@ main {
 .dinette_inner > div:hover .bottom_link:after,
 .commodity_product > div:hover .bottom_link:after,
 .Things_you_need > div:hover .bottom_link:after,
+.collection > div:hover .bottom_link:after,
 .read_more:hover:after,
 .our_story:hover:after {
   transform: scaleX(0);
@@ -58,6 +59,7 @@ main {
 /* header */
 header {
   width: 100%;
+  height: 60%;
   position: fixed;
   top: 0;
   left: 0;
@@ -65,6 +67,46 @@ header {
 }
 header.active {
   background-color: #fff;
+  height: fit-content;
+}
+header.down {
+  background-color: #fff;
+  animation: fade_down 0.5s forwards;
+}
+@keyframes fade_down {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 60%;
+  }
+}
+header.up {
+  animation: fade_up 0.5s;
+}
+@keyframes fade_up {
+  0% {
+    height: 60%;
+    background-color: #fff;
+  }
+  100% {
+    height: 5%;
+  }
+}
+header.middle {
+  animation: fade_up 0.5s;
+}
+@keyframes fade_up {
+  0% {
+    height: 60%;
+    background-color: #fff;
+  }
+  100% {
+    height: 5%;
+  }
+}
+nav {
+  position: relative;
 }
 .nav_wrap {
 }
@@ -80,6 +122,7 @@ header.active {
   display: inline;
   box-sizing: border-box;
   margin-right: 1em;
+  padding: 1em 0;
 }
 ul.util {
   display: flex;
@@ -108,18 +151,8 @@ li.search_icon svg.active {
 }
 /* lnb */
 .lnb {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  margin-top: 48px;
-  display: none;
-  padding: 0 100px;
-  background-color: #fff;
 }
-.Things_you_need,
-.collection {
+.lnb > div {
   display: flex;
   padding: 1em 0 0em 0;
 }
@@ -127,30 +160,43 @@ li.search_icon svg.active {
 }
 .collection {
 }
-.lnb_menu {
+.lnb_menu,
+.lnb_menu2 {
   margin-right: 5em;
 }
-.lnb_menu ul {
-  flex: 1;
+.lnb_menu ul,
+.lnb_menu2 ul {
+  width: 150%;
 }
 .Things_you_need .lnb_menu ul {
   margin-right: 0.7em;
 }
-.lnb_menu ul li {
+.lnb_menu ul li,
+.lnb_menu2 ul li {
+  display: block;
   margin-top: 1.5em;
 }
-.lnb_menu ul li a {
+.lnb_menu ul li a,
+.lnb_menu2 ul li a {
   transition: 0.3s;
   color: #212529;
 }
+.lnb_menu ul li:hover a,
 .lnb_menu ul li:hover a {
   opacity: 0.5;
 }
-.lnb_img {
+.lnb_img,
+.lnb_img2 {
   height: fit-content;
   padding: 0 3em;
   border-right: 2px solid rgba(125, 124, 123, 0.3);
 }
+.lnb_img img,
+.lnb_img2 img {
+  max-width: 100%;
+  height: auto;
+}
+
 .lnb_recomend,
 .lnb_dinette {
   margin: 0 2em 0 3em;
@@ -158,7 +204,16 @@ li.search_icon svg.active {
 .lnb_menu ul li.on {
   opacity: 0.5;
 }
-
+.lnb_bg {
+  width: 100%;
+  height: calc(110% + 120px);
+  background-color: red;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  z-index: -30;
+  display: none;
+}
 /* mainVisual */
 .main_visual {
   width: 100%;
