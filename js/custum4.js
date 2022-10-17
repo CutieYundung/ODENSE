@@ -67,20 +67,24 @@ $(document).ready(function () {
 });
 // sec2-탭메뉴----------------------------------------------------------------------------------
 $(document).ready(function () {
-  var icon = $(".tyn_menu > li");
-
-  for (let i = 0; i < icon.length; i++) {
-    var item = $(".need_items");
+  var item = $(".need_items");
+  if (matchMedia("screen and (max-width: 767px)").matches) {
     item.hide();
-    item.eq(0).show();
-
-    $(icon)
-      .eq(i)
-      .on("click", function () {
-        item.hide();
-        $(item).eq(i).stop().show();
-        $(".menu ul li span").removeClass("on");
-        $(this).children("span").addClass("on");
-      });
+  } else if (matchMedia("screen and (min-width: 768px)").matches) {
+        var icon = $(".tyn_menu > li");
+    
+        for (let i = 0; i < icon.length; i++) {
+          var item = $(".need_items");
+          item.hide();
+          item.eq(0).show();
+      
+          $(icon)
+            .eq(i)
+            .on("click", function () {
+              item.hide();
+              $(item).eq(i).stop().show();
+              $(".menu ul li span").removeClass("on");
+              $(this).children("span").addClass("on");
+            } )}
   }
-});
+  });
