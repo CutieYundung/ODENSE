@@ -11,28 +11,28 @@ $(window).scroll(function () {
 });
 
 // header-탭메뉴----------------------------------------------------------------------
-var lnb = $('.lnb > div');
+var lnb = $(".lnb > div");
 $(lnb).hide();
-$('#TH').mouseenter(function(){
+$("#TH").mouseenter(function () {
   $(lnb).eq(0).stop().fadeIn();
-  $(lnb).eq(1).hide()
-  $('header').addClass('down');
-  $('header').removeClass('up');
-  $('.gnb, .login_icon svg, .search_icon svg').addClass('active');
-})
-$('#CO').mouseenter(function(){
+  $(lnb).eq(1).hide();
+  $("header").addClass("down");
+  $("header").removeClass("up");
+  $(".gnb, .login_icon svg, .search_icon svg").addClass("active");
+});
+$("#CO").mouseenter(function () {
   $(lnb).eq(1).stop().fadeIn();
   $(lnb).eq(0).hide();
-  $('header').addClass('down');
-  $('header').removeClass('up');
-  $('.gnb, .login_icon svg, .search_icon svg').addClass('active');
-})
-$('header').mouseleave(function(){
+  $("header").addClass("down");
+  $("header").removeClass("up");
+  $(".gnb, .login_icon svg, .search_icon svg").addClass("active");
+});
+$("header").mouseleave(function () {
   $(lnb).fadeOut(200);
-  $('header').removeClass('down');
-  $('header').addClass('up');
-  $('.gnb, .login_icon svg, .search_icon svg').removeClass('active');
-})
+  $("header").removeClass("down");
+  $("header").addClass("up");
+  $(".gnb, .login_icon svg, .search_icon svg").removeClass("active");
+});
 
 //nav 호버시 이미지 변경-----------------------------------------------------------------------
 $(document).ready(function () {
@@ -40,7 +40,7 @@ $(document).ready(function () {
   var item = $(".lnb_img > img");
   item.hide();
   item.eq(0).show();
-  
+
   for (let i = 0; i < icon.length; i++) {
     $(icon)
       .eq(i)
@@ -55,7 +55,7 @@ $(document).ready(function () {
   var item = $(".lnb_img2 > img");
   item.hide();
   item.eq(0).show();
-  
+
   for (let i = 0; i < icon.length; i++) {
     $(icon)
       .eq(i)
@@ -83,4 +83,10 @@ $(document).ready(function () {
         $(this).children("span").addClass("on");
       });
   }
+});
+
+//sec3-탭메뉴----------------------------------------------------------------------------------
+$(".collection_nav ul li").on("click", function () {
+  $(".collection_nav ul li").removeClass("on");
+  $(this).addClass("on");
 });

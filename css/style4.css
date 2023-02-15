@@ -423,17 +423,16 @@ li.search_icon svg.active {
 .collection_nav ul li {
   cursor: pointer;
   margin-left: 2em;
-}
-.collection_nav ul li a {
   color: #7d7c7b;
   transition: 0.3s;
   border-bottom: 2px solid transparent;
 }
-.collection_nav ul li a.on {
-  border-bottom: 2px solid #7d7c7b;
+.collection_nav ul li a {
+}
+.collection_nav ul li.on {
   color: #212529;
 }
-.collection_nav ul li a:hover {
+.collection_nav ul li:hover {
   color: #212529;
 }
 .tabs__content-wrap {
