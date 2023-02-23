@@ -695,7 +695,7 @@ li.search_icon svg.active {
 .ods_center > a {
   color: #212529;
 }
-/* sec7-instagrem video */
+/* sec7-instagrem video ------------------------*/
 .sec7_insta {
   padding: 6em 0;
 }
@@ -724,8 +724,15 @@ li.search_icon svg.active {
 /* video */
 .insta_video {
   grid-row-start: 2;
+  /* overflow: hidden; */
+  width: 500%;
+  border: 1px solid #000;
+  height: 45vmin;
 }
 .video_slide {
+  width: inherit;
+  height: 100%;
+  display: flex;
 }
 .video {
   cursor: pointer;
